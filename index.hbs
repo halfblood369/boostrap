@@ -4,6 +4,11 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
 <header>
   <div class="row">
     <div class="col-lg-12">
@@ -13,9 +18,9 @@
     	</a>
     	{{/if}}
       <div class="page-header">
-        <h1 class="blog-title">{{@blog.title}}</h1>
+        <h2 class="blog-title">{{@blog.title}}</h2>
       </div>
-    	<h2 class="blog-description text-muted">{{@blog.description}}</h2>
+    	<h3 class="blog-description text-muted">{{@blog.description}}</h3>
     </div>
   </div>
 </header>
@@ -42,6 +47,17 @@
       		<p>{{excerpt}}&hellip;</p>
       	</section>
       </article>
+    </div>
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="http://s.gravatar.com/avatar/ee5d3582b800a8abdae5fdfc56d40045?s=80">
+        </div>
+        <div class="col-md-6">
+          <p style="font-size:20px">Halfblood</p>
+          <wb:follow-button uid="2209129934" type="red_1" width="63" height="24" ></wb:follow-button>
+        </div>
+      </div>
     </div>
   </div>
 
