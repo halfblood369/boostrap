@@ -4,19 +4,16 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
 <header>
   <div class="row">
     <div class="col-lg-12">
-    	{{#if @blog.logo}}
-    	<a href="{{@blog.url}}">
-    		<img src="{{@blog.logo}}" alt="Blog Logo" />
-    	</a>
-    	{{/if}}
+      <div style="width: 20px">
+        {{#if @blog.logo}}
+        <a href="{{@blog.url}}">
+          <img src="{{@blog.logo}}" alt="Blog Logo" />
+        </a>
+        {{/if}}
+      </div>
       <div class="page-header">
         <h2 class="blog-title">{{@blog.title}}</h2>
       </div>
@@ -32,7 +29,7 @@
   {{#foreach posts}}
 
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-8">
       <article class="{{post_class}}">
       	<header class="post-header">
           <h2 class="post-title">
